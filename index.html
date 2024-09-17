@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBZen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="sidebar">
+    <button id="open-file-btn">Open CBZ</button>
+    <h2>Recently Read</h2>
+    <ul id="recent-files">
+      <!-- Recently opened files will be listed here -->
+    </ul>
+  </div>
+
+  <!-- Resizable divider -->
+  <div id="divider"></div>
+
+  <div id="image-container">
+    <!-- Images from the CBZ file will be displayed here -->
+  </div>
+
+  <div id="loading-text">Loading...</div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

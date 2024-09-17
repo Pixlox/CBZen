@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2f3136;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Sidebar */
+  #sidebar {
+    background-color: #202225;
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    min-width: 150px;
+  }
+  
+  #sidebar h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar button {
+    background-color: #5865f2;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #sidebar button:hover {
+    background-color: #4752c4;
+  }
+  
+  #recent-files {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #recent-files li {
+    padding: 10px;
+    background-color: #3e4148;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  #recent-files li:hover {
+    background-color: #4e525a;
+  }
+  
+  /* Resizable divider */
+  #divider {
+    width: 5px;
+    cursor: col-resize;
+    background-color: #1f1f1f;
+    flex-shrink: 0;
+  }
+  
+  /* Main content area (image container) */
+  #image-container {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  img {
+    max-width: 90%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #recent-files li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  #recent-files li:hover .remove-file {
+    display: block;
+  }
+  
+  .remove-file {
+    display: none;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+  }
+  
+  .missing-file .file-name {
+    color: red;
+  }
+  
+  #loading-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+
+  #bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #2e2e2e;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* This will align the file name and progress on opposite sides */
+    font-size: 15px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #file-name {
+    margin-left: 10px;
+  }
+  
+  #progress {
+    margin-right: 20px;
+  }
+  
